@@ -33,7 +33,7 @@ def test_circle():
 
 
 def test_random_list():
-    l = [randint(0, 101) for i in range(10)]
+    l = [randint(1, 100) for i in range(10)]
     l.sort()
     assert len(l) == 10
     assert all(l[i] <= l[i + 1] for i in range(len(l) - 1))
@@ -51,7 +51,6 @@ def test_dicts():
     first = ["a", "b", "c", "d", "e"]
     second = [1, 2, 3, 4, 5]
     d = dict(zip(first, second))
-    print(d)
     assert isinstance(d, dict)
     assert len(d) == 5
     assert list(d.keys()) == first
